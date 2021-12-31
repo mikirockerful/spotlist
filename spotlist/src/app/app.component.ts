@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private authService: AuthService) {}
 
   onLoginButtonClicked() {
-    this.authService.login().subscribe(responseData => this.responseData = responseData.toString());
+    this.authService.login();
   }
 
 }
