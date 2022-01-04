@@ -1,1 +1,22 @@
-<ul class="list-group"><li class="list-group-item" *ngFor="let playlist of playlists">{{playlist.name}}</li></ul>
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li 
+            class="list-group-item"
+            style="cursor: pointer;"
+            *ngFor="let playlist of playlists" 
+            (click)="onPlaylistSelected(playlist)" 
+            [ngClass]="{'active': playlist === selectedPlaylist}">
+                {{playlist.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <div *ngIf="selectedPlaylist; else noPlaylistSelected">
+            <app-playlist-detail [playlist]=selectedPlaylist!></app-playlist-detail>
+        </div>
+        <ng-template #noPlaylistSelected>
+            <div>No playlist selected</div>
+        </ng-template>
+    </div>
+</div>

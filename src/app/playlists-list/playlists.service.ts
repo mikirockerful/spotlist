@@ -23,6 +23,7 @@ export class PlaylistsService {
                     name: item.name,
                     description: item.description,
                     uri: item.uri,
+                    images: item.images
                 }
             });
         }));

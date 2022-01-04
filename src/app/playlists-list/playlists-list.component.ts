@@ -15,12 +15,17 @@ export class PlaylistsListComponent implements OnInit {
   playlistsSubscription: Subscription | undefined;
   playlists: Playlist[] = [];
   accessToken: string = 'test';
+  selectedPlaylist: Playlist | undefined;
 
   ngOnInit(): void {
       this.accessToken = this.route.snapshot.data['accessToken'];
       this.playlistsSubscription = this.playlistsService.getPlaylists(this.accessToken).subscribe(playlists => {
         this.playlists = playlists;
       });
+  }
+
+  onPlaylistSelected(playlist: Playlist) {
+    this.selectedPlaylist = playlist;
   }
 
 }

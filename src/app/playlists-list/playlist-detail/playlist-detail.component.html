@@ -1,0 +1,11 @@
+<div class="text-center">
+    <div *ngIf="playlist.images?.length">
+        <img src="{{playlist.images[0].url}}" alt="Playlist cover image" class="img-thumbnail rounded" height="200px" width="200px">
+    </div>
+
+    <h2>
+        {{playlist.name}}
+    </h2>
+    <div [innerHTML]="playlist.description"></div>
+</div>
+

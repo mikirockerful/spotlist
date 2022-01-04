@@ -8,7 +8,9 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent {
   title = 'spotlist';
-  responseData = '';
   constructor(private authService: AuthService) { }
 
+  onLogoutButtonClicked() {
+    this.authService.logout();
+  }
 }

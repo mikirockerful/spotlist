@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlaylistsListComponent } from './playlists-list/playlists-list.component';
 import { LoginComponent } from './login/login.component';
+import { PlaylistDetailComponent } from './playlists-list/playlist-detail/playlist-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlaylistsListComponent,
-    LoginComponent
+    LoginComponent,
+    PlaylistDetailComponent,
   ],
   imports: [
     BrowserModule,
