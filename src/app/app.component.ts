@@ -9,10 +9,6 @@ import { AuthService } from './auth/auth.service';
 export class AppComponent {
   title = 'spotlist';
   responseData = '';
-  constructor(private authService: AuthService) {}
-
-  onLoginButtonClicked() {
-    this.authService.login();
-  }
+  constructor(private authService: AuthService) { }
 
 }

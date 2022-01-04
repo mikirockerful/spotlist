@@ -8,11 +8,11 @@ export class TokenResolver implements Resolve<string> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): string | Observable<string> | Promise<string> {
         if (!route.fragment) {
-            this.router.navigate(['']);
+            this.router.navigate(['login']);
         }
         const accessToken = new URLSearchParams(route.fragment!).get('access_token');
         if (!accessToken) {
-            this.router.navigate(['']);
+            this.router.navigate(['login']);
         }
         return accessToken!;
     }

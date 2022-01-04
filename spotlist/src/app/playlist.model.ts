@@ -1,6 +1,0 @@
-export interface Playlist {
-    id: string;
-    name: string;
-    description: string;
-    uri: string;
-}
