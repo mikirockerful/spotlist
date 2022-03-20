@@ -7,5 +7,20 @@
         {{playlist.name}}
     </h2>
     <div [innerHTML]="playlist.description"></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Artist</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let track of tracks; index as i" [attr.id]="track.id">
+                <td>{{track.name}}</td>
+                <td>{{track.artistName}}</td>
+                <td *ngIf="editMode"><button (click)="onRemoveTrackButtonClicked(track)">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 

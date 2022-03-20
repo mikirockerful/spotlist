@@ -13,7 +13,7 @@ import { PlaylistDetailComponent } from './playlists-list/playlist-detail/playli
     AppComponent,
     PlaylistsListComponent,
     LoginComponent,
-    PlaylistDetailComponent,
+    PlaylistDetailComponent
   ],
   imports: [
     BrowserModule,
